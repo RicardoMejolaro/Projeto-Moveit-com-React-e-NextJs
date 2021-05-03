@@ -120,7 +120,7 @@ export function ChallengesProvider({
                 closeLevelUpModal
             }}
         >
-            { children}
+            {children}
 
             {isLevelUpModalOpen && <LevelUpModal />}
         </ChallengesContext.Provider>

@@ -15,3 +15,11 @@
     padding: 2rem 0;
     align-content: center;
 }
+
+@media (max-width: 768px) {
+    .container section {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+}
