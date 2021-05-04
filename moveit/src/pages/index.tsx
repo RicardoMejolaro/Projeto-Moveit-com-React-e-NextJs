@@ -14,6 +14,7 @@ import Profile from "../components/Profile";
 import CompletedChallenges from "../components/CompletedChallenges";
 import Countdown from "../components/Countdown";
 import ChallengeBox from '../components/ChallengeBox';
+import Footer from '../components/Footer';
 
 interface HomeProps {
     level: number,
@@ -45,6 +46,7 @@ export default function Home(props: HomeProps) {
                             <ChallengeBox />
                         </div>
                     </section>
+                    <Footer/>
                 </CountdownProvider>
             </div>
         </ChallengesProvider>

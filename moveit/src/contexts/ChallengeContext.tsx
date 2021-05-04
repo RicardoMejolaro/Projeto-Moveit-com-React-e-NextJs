@@ -17,6 +17,8 @@ interface ChallengesContextData {
     level: number,
     currentExperience: number,
     challengesCompleted: number,
+    challengesEyesCompleted: number,
+    challengesBodyCompleted: number,
     activeChallenge: Challenge,
     experienceToNextLevel: number,
     levelUp: () => void,
@@ -30,7 +32,9 @@ interface ChallengesProviderProps {
     children: ReactNode,
     level: number,
     currentExperience: number,
-    challengesCompleted: number
+    challengesCompleted: number,
+    challengesEyesCompleted: number,
+    challengesBodyCompleted: number,
 }
 
 //Criação do contexto global
@@ -43,6 +47,8 @@ export function ChallengesProvider({
     const [level, setLevel] = useState(rest.level ?? 1)
     const [currentExperience, setCurrentExperience] = useState(rest.currentExperience ?? 0)
     const [challengesCompleted, setChallengesCompleted] = useState(rest.challengesCompleted ?? 0)
+    const [challengesEyesCompleted, setChallengesEyesCompleted] = useState(rest.challengesEyesCompleted ?? 0)
+    const [challengesBodyCompleted, setChallengesBodyCompleted] = useState(rest.challengesBodyCompleted ?? 0)
 
     const [activeChallenge, setActiveChallenge] = useState(null)
     const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false)
@@ -57,7 +63,9 @@ export function ChallengesProvider({
         Cookies.set('level', String(level))
         Cookies.set('currentExperience', String(currentExperience))
         Cookies.set('challengesCompleted', String(challengesCompleted))
-    }, [level, currentExperience, challengesCompleted])
+        Cookies.set('challengesEyesCompleted', String(challengesEyesCompleted))
+        Cookies.set('challengesBodyCompleted', String(challengesBodyCompleted))
+    }, [level, currentExperience, challengesCompleted, challengesEyesCompleted, challengesBodyCompleted])
 
     const levelUp = () => {
         setLevel(level + 1)
@@ -103,6 +111,14 @@ export function ChallengesProvider({
         setCurrentExperience(finalExperience)
         setActiveChallenge(null)
         setChallengesCompleted(challengesCompleted + 1)
+
+        if (activeChallenge) {
+            if(activeChallenge.type == "eye") {
+                setChallengesEyesCompleted(challengesEyesCompleted + 1)
+            } else {
+                setChallengesBodyCompleted(challengesBodyCompleted + 1)
+            }
+        }
     }
 
     return (
@@ -111,12 +127,14 @@ export function ChallengesProvider({
                 level,
                 currentExperience,
                 challengesCompleted,
+                challengesEyesCompleted,
+                challengesBodyCompleted,
                 activeChallenge,
                 experienceToNextLevel,
                 levelUp,
                 startNewChallenge,
                 resetChallenge,
-                completeChallenge,
+                completeChallenge,                
                 closeLevelUpModal
             }}
         >

@@ -70,7 +70,6 @@
 ### Extras que eu implementei
 
 - Responsividade
-- Total de exercícios feitos
 - Quantidade de exercícios para os olhos e para o corpo
 - Modo Dark e Light
 
