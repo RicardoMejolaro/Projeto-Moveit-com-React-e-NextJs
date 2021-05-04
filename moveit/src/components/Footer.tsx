@@ -21,8 +21,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className={styles.footerAboutMeContainer}>
-                <span>Desafios completos</span>
-                <span>{challengesCompleted}</span>
+                <span>Desenvolvido com 💙️ por Ricardo Mejolaro.</span>
             </div>
         </div>
 
