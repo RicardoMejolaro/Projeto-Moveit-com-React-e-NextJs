@@ -62,7 +62,7 @@
 
 ### 🚀️ Acessar site versão deploy
 
-<a href="https://www.linkedin.com/in/ricardo-mejolaro/">
+<a href="https://moveitapplication.vercel.app/">
 Clique para testar o APP
 </a>
 
