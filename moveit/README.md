@@ -34,34 +34,6 @@
 
 ## 🚀️ Apresentação do site
 
----
-
-<h2>Visualização - Desktop:<h2>
-
----
-
-<video width="320" height="240" autoplay muted>
-  <source src="public/desktop-1.webm" type="video/webm">
-</video>
-
-<video width="320" height="240" autoplay muted>
-  <source src="public/desktop-2.webm" type="video/webm">
-</video>
-
----
-
-<h2>Visualização - Responsivo:<h2>
-
----
-
-<video width="320" height="240" autoplay muted>
-  <source src="public/responsivo-2.webm" type="video/webm">
-</video>
-
----
-
-### 🚀️ Acessar site versão deploy
-
 <a href="https://moveitapplication.vercel.app/">
 Clique para testar o APP
 </a>
