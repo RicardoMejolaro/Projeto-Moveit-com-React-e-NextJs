@@ -19,7 +19,9 @@ import Footer from '../components/Footer';
 interface HomeProps {
     level: number,
     currentExperience: number,
-    challengesCompleted: number
+    challengesCompleted: number,
+    challengesEyesCompleted: number,
+    challengesBodyCompleted: number
 }
 
 export default function Home(props: HomeProps) {
@@ -28,6 +30,8 @@ export default function Home(props: HomeProps) {
             level={props.level}
             currentExperience={props.currentExperience}
             challengesCompleted={props.challengesCompleted}
+            challengesEyesCompleted={props.challengesEyesCompleted}
+            challengesBodyCompleted={props.challengesBodyCompleted}
         >
             <div className={styles.container}>
                 <Head>
@@ -55,13 +59,15 @@ export default function Home(props: HomeProps) {
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
-    const { level, currentExperience, challengesCompleted } = ctx.req.cookies
+    const { level, currentExperience, challengesCompleted, challengesEyesCompleted, challengesBodyCompleted} = ctx.req.cookies
 
     return {
         props: {
             level: Number(level) || 1,
             currentExperience: Number(currentExperience) || 0,
-            challengesCompleted: Number(challengesCompleted) || 0
+            challengesCompleted: Number(challengesCompleted) || 0,
+            challengesEyesCompleted: Number(challengesEyesCompleted) || 0,
+            challengesBodyCompleted: Number(challengesBodyCompleted) || 0,
         }
     }
 }

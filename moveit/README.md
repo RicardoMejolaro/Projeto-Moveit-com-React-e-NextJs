@@ -40,9 +40,13 @@
 
 ---
 
-<h3>
-<img src="src/assets/img/projeto-rick-and-morty-desktop.gif" alt="Imagem do site em desktop">
-</h3>
+<video width="320" height="240" autoplay muted>
+  <source src="public/desktop-1.webm" type="video/webm">
+</video>
+
+<video width="320" height="240" autoplay muted>
+  <source src="public/desktop-2.webm" type="video/webm">
+</video>
 
 ---
 
@@ -50,9 +54,17 @@
 
 ---
 
-<h3>
-<img src="src/assets/img/projeto-rick-and-morty-responsivo.gif" alt="Imagem do site em layout responsivo">
-</h3>
+<video width="320" height="240" autoplay muted>
+  <source src="public/responsivo-2.webm" type="video/webm">
+</video>
+
+---
+
+### 🚀️ Acessar site versão deploy
+
+<a href="https://www.linkedin.com/in/ricardo-mejolaro/">
+Clique para testar o APP
+</a>
 
 ---
 
@@ -71,7 +83,6 @@
 
 - Responsividade
 - Quantidade de exercícios para os olhos e para o corpo
-- Modo Dark e Light
 
 ---
 
