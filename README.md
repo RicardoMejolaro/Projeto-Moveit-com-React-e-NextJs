@@ -1,5 +1,5 @@
 <h1 align=center>
-<img src="public/logo-full.svg" alt="Move.it logo" width="300px"/>
+<img src="moveit/public/logo-full.svg" alt="Move.it logo" width="300px"/>
 
 ---
 
@@ -113,7 +113,7 @@ Agora é só testar em seu navegador!
 ***Ricardo Mejolaro*** 
 <br/> 
 <a href="https://www.linkedin.com/in/ricardo-mejolaro/">
-<img src="public/linkedin.png">
+<img src="moveit/public/linkedin.png">
 </a>
 
 ### Licença
